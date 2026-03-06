@@ -6,72 +6,325 @@
     <title>Privacy Policy - Crown & Caddie</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.7; padding: 40px 20px; max-width: 800px; margin: 0 auto; background: #fafafa; }
-        h1 { font-size: 28px; margin-bottom: 8px; color: #2D5F2E; }
-        h2 { font-size: 20px; margin: 32px 0 12px; color: #2D5F2E; }
-        p, li { font-size: 15px; margin-bottom: 12px; }
-        ul { padding-left: 24px; }
-        .date { color: #666; font-size: 14px; margin-bottom: 32px; }
-        a { color: #2D5F2E; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.7;
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+        .header {
+            padding: 48px 24px 40px;
+            text-align: center;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .brand {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            color: #999999;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .date {
+            font-size: 13px;
+            color: #999999;
+            letter-spacing: 0.2px;
+        }
+        .wrap {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        .intro {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #888888;
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .section {
+            margin-bottom: 36px;
+        }
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #cccccc;
+            margin-bottom: 8px;
+        }
+        .section h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+        .section p {
+            font-size: 14.5px;
+            line-height: 1.75;
+            color: #888888;
+            margin-bottom: 10px;
+        }
+        .section p:last-child { margin-bottom: 0; }
+        .section ul {
+            padding-left: 18px;
+            margin-bottom: 10px;
+        }
+        .section li {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: #888888;
+            margin-bottom: 4px;
+        }
+        .section strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+        .divider {
+            height: 1px;
+            background: #eeeeee;
+            margin: 36px 0;
+        }
+        .contact-box {
+            border: 1px solid #eeeeee;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 8px;
+        }
+        .contact-box p {
+            font-size: 14px;
+            color: #888888;
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        .contact-box strong {
+            color: #1a1a1a;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid #eeeeee;
+            margin-top: 16px;
+        }
+        .footer-brand {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #cccccc;
+            margin-bottom: 8px;
+        }
+        .footer p {
+            font-size: 12px;
+            color: #cccccc;
+            margin-bottom: 4px;
+        }
+        .footer-links {
+            margin-top: 16px;
+        }
+        .footer-links a {
+            font-size: 13px;
+            color: #999999;
+            text-decoration: none;
+            margin: 0 12px;
+            letter-spacing: 0.2px;
+        }
+        .footer-links a:hover {
+            color: #1a1a1a;
+        }
+        a { color: #1a1a1a; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="date">Last updated: March 5, 2026</p>
+    <div class="header">
+        <div class="brand">Crown & Caddie</div>
+        <h1>Privacy Policy</h1>
+        <div class="date">Effective February 1, 2026</div>
+    </div>
 
-    <p>Crown & Caddie ("we", "our", or "us") operates the Crown & Caddie mobile application. This Privacy Policy explains how we collect, use, and protect your information.</p>
+    <div class="wrap">
+        <p class="intro">Crown & Caddie, LLC (&ldquo;Crown & Caddie,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the Crown & Caddie mobile application and related services (collectively, the &ldquo;Platform&rdquo;). By accessing or using the Platform, you consent to the practices described in this policy.</p>
 
-    <h2>Information We Collect</h2>
-    <p><strong>Account Information:</strong> When you create an account, we collect your name, email address, and profile photo.</p>
-    <p><strong>User Content:</strong> Photos, videos, posts, comments, and messages you create within the app.</p>
-    <p><strong>Location Data:</strong> With your permission, we collect your location to show nearby golf courses, marketplace listings, and service providers.</p>
-    <p><strong>Payment Information:</strong> Payment details are processed securely through Stripe. We do not store your full credit card information.</p>
-    <p><strong>Device Information:</strong> We collect device identifiers and crash data to improve app performance and stability.</p>
-    <p><strong>Usage Data:</strong> We collect information about how you interact with the app to improve our services.</p>
+        <div class="section">
+            <div class="section-label">01</div>
+            <h2>Information We Collect</h2>
+            <p><strong>a) Information You Provide</strong><br>When you create an account, we collect your name, email address, date of birth, profile photograph, golf handicap index, home course, and any other details you choose to share. If you participate in challenges or marketplace transactions, we collect payment information, shipping addresses, and transaction history.</p>
+            <p><strong>b) Information Collected Automatically</strong><br>When you use the Platform, we automatically collect device identifiers, operating system version, app version, IP address, browser type, crash logs, and performance diagnostics. We also collect usage data such as screens viewed, features used, session duration, and interaction patterns.</p>
+            <p><strong>c) Information from Third Parties</strong><br>We may receive information from third-party services you connect to your account, including golf handicap providers (e.g., GHIN), social media platforms, and payment processors. If another user invites you or tags you in content, we may receive your contact information from that user.</p>
+        </div>
 
-    <h2>How We Use Your Information</h2>
-    <ul>
-        <li>To provide and maintain the Crown & Caddie platform</li>
-        <li>To enable social features (posts, likes, comments, follows, messages)</li>
-        <li>To facilitate marketplace transactions between buyers and sellers</li>
-        <li>To show relevant content based on your location and preferences</li>
-        <li>To send push notifications about activity on your account</li>
-        <li>To improve app performance and fix issues</li>
-        <li>To prevent fraud and ensure platform safety</li>
-    </ul>
+        <div class="divider"></div>
 
-    <h2>Information Sharing</h2>
-    <p>We do not sell your personal information. We share data only in these cases:</p>
-    <ul>
-        <li><strong>Other Users:</strong> Your profile, posts, and public activity are visible to other users.</li>
-        <li><strong>Service Providers:</strong> We use Supabase (database), Stripe (payments), Sentry (error tracking), and Expo (push notifications) to operate the app.</li>
-        <li><strong>Legal Requirements:</strong> We may disclose information if required by law.</li>
-    </ul>
+        <div class="section">
+            <div class="section-label">02</div>
+            <h2>Location Information</h2>
+            <p>With your explicit consent, we collect precise location data when you check in at golf courses, participate in location-based challenges, or use course discovery features. You may enable or disable location services at any time through your device settings.</p>
+            <p>We may also collect approximate location data derived from your IP address for regional content delivery, currency display, and compliance with local regulations. This approximate data does not pinpoint your exact position.</p>
+        </div>
 
-    <h2>Data Security</h2>
-    <p>We use industry-standard security measures including encrypted connections (HTTPS/TLS), secure authentication tokens stored in the iOS Keychain, and Row Level Security on our database.</p>
+        <div class="divider"></div>
 
-    <h2>Your Rights</h2>
-    <p>You can:</p>
-    <ul>
-        <li>Access and update your profile information at any time</li>
-        <li>Delete your posts and content</li>
-        <li>Request deletion of your account by contacting us</li>
-        <li>Control location permissions through your device settings</li>
-        <li>Manage push notification preferences in the app</li>
-    </ul>
+        <div class="section">
+            <div class="section-label">03</div>
+            <h2>How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Operate, maintain, and improve the Platform and its features</li>
+                <li>Create and manage your account, authenticate your identity, and provide customer support</li>
+                <li>Personalize your experience, including your feed, recommendations, and search results</li>
+                <li>Facilitate challenges, competitions, leaderboards, and handicap tracking</li>
+                <li>Process transactions, entry fees, payouts, and marketplace purchases</li>
+                <li>Send you notifications about challenge updates, messages, social interactions, and account activity</li>
+                <li>Detect, investigate, and prevent fraud, cheating, score manipulation, and other prohibited activities</li>
+                <li>Comply with legal obligations, enforce our Terms of Service, and protect the rights and safety of our users</li>
+                <li>Generate aggregated, de-identified analytics to understand usage trends and improve the Platform</li>
+            </ul>
+        </div>
 
-    <h2>Data Retention</h2>
-    <p>We retain your data while your account is active. When you delete your account, we remove your personal information within 30 days, except where required by law.</p>
+        <div class="divider"></div>
 
-    <h2>Children's Privacy</h2>
-    <p>Crown & Caddie is not intended for children under 13. We do not knowingly collect information from children under 13.</p>
+        <div class="section">
+            <div class="section-label">04</div>
+            <h2>How We Share Your Information</h2>
+            <p>We do not sell your personal information. We share information only in the following circumstances:</p>
+            <p><strong>a) With Other Users</strong><br>Your public profile, posted scores, challenge results, social activity, and user-generated content are visible to other users in accordance with your privacy settings.</p>
+            <p><strong>b) With Service Providers</strong><br>We engage trusted third-party service providers to operate the Platform, including:</p>
+            <ul>
+                <li>Stripe &mdash; Payment processing</li>
+                <li>Supabase &mdash; Cloud infrastructure and authentication</li>
+                <li>Expo (EAS) &mdash; Push notification delivery</li>
+                <li>Resend &mdash; Transactional email delivery</li>
+                <li>Sentry &mdash; Error tracking and crash reporting</li>
+                <li>Apple Sign-In / Google Sign-In &mdash; Third-party authentication</li>
+                <li>Google Places API &mdash; Location and search services</li>
+                <li>GIPHY &mdash; GIF search in messaging</li>
+            </ul>
+            <p><strong>c) For Legal and Safety Purposes</strong><br>We may disclose your information when required by law, subpoena, court order, or governmental request; to enforce our Terms of Service; to protect the rights, property, or safety of Crown & Caddie, our users, or the public.</p>
+            <p><strong>d) Business Transfers</strong><br>In the event of a merger, acquisition, reorganization, or sale of assets, your information may be transferred as part of that transaction.</p>
+        </div>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any material changes through the app or by email.</p>
+        <div class="divider"></div>
 
-    <h2>Contact Us</h2>
-    <p>If you have questions about this Privacy Policy, contact us at:</p>
-    <p>Email: <a href="mailto:support@crownandcaddie.com">support@crownandcaddie.com</a></p>
+        <div class="section">
+            <div class="section-label">05</div>
+            <h2>Data Retention</h2>
+            <p>We retain your personal information for as long as your account is active or as needed to provide you with our services. If you delete your account, we will remove your profile, posts, and personal data within a reasonable period, except where retention is required for legal compliance, dispute resolution, fraud prevention, or enforcement of our agreements.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">06</div>
+            <h2>Data Security</h2>
+            <p>We implement appropriate technical and organizational measures designed to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include encryption of data in transit and at rest, secure authentication, regular security assessments, access controls limiting employee access to personal data, and use of PCI-compliant payment processors.</p>
+            <p>No method of electronic transmission or storage is completely secure. While we take reasonable precautions to protect your information, we cannot guarantee absolute security.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">07</div>
+            <h2>Your Rights and Choices</h2>
+            <p>Depending on your jurisdiction, you may have the following rights:</p>
+            <ul>
+                <li><strong>Access</strong> &mdash; Request a copy of the personal data we hold about you</li>
+                <li><strong>Correction</strong> &mdash; Request correction of inaccurate or incomplete information</li>
+                <li><strong>Deletion</strong> &mdash; Request deletion of your personal data, subject to certain exceptions</li>
+                <li><strong>Portability</strong> &mdash; Request a machine-readable copy of your data</li>
+                <li><strong>Opt-Out</strong> &mdash; Opt out of non-essential communications and targeted advertising</li>
+                <li><strong>Restriction</strong> &mdash; Request that we limit the processing of your data in certain circumstances</li>
+                <li><strong>Withdrawal of Consent</strong> &mdash; Withdraw consent for data processing where consent is the legal basis</li>
+            </ul>
+            <p>You can exercise many of these rights directly through the Settings screen in the app.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">08</div>
+            <h2>Children&rsquo;s Privacy</h2>
+            <p>Crown & Caddie is not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that a user is under 18, we will promptly delete their account and associated data.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">09</div>
+            <h2>International Data Transfers</h2>
+            <p>Your information may be transferred to and processed in countries other than your country of residence, including the United States, where our servers and service providers are located. We take appropriate safeguards to ensure your information remains protected in accordance with this Privacy Policy and applicable law.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">10</div>
+            <h2>Cookies and Tracking Technologies</h2>
+            <p>The Platform may use local storage, session tokens, and similar technologies to maintain your authentication state, remember your preferences, and collect usage analytics. You can manage your tracking preferences through your device settings.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">11</div>
+            <h2>Third-Party Links and Services</h2>
+            <p>The Platform may contain links to third-party websites, services, or applications that are not operated by us. We are not responsible for the privacy practices of these third parties.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">12</div>
+            <h2>California Privacy Rights</h2>
+            <p>If you are a California resident, the California Consumer Privacy Act (CCPA) provides you with additional rights, including the right to know what personal information we collect, the right to request deletion, and the right to opt out of the sale of personal information. We do not sell personal information.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">13</div>
+            <h2>European Privacy Rights</h2>
+            <p>If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, you have additional rights under the General Data Protection Regulation (GDPR), including the right to lodge a complaint with your local data protection authority.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">14</div>
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. For significant changes, we will provide prominent notice through the app or via email at least 30 days before the changes take effect.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-label">15</div>
+            <h2>Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+            <div class="contact-box">
+                <p><strong>Crown & Caddie, LLC</strong></p>
+                <p>Email: <a href="mailto:crownandcaddie@gmail.com">crownandcaddie@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-brand">Crown & Caddie</div>
+            <p>&copy; 2026 Crown & Caddie, LLC. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="terms.html">Terms of Service</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
