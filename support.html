@@ -1,234 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - Crown & Caddie</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            color: #1a1a1a;
-            line-height: 1.7;
-            background: #ffffff;
-            -webkit-font-smoothing: antialiased;
-        }
-        .header {
-            padding: 48px 24px 40px;
-            text-align: center;
-            border-bottom: 1px solid #eeeeee;
-        }
-        .brand {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 3.5px;
-            text-transform: uppercase;
-            color: #999999;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            font-size: 32px;
-            font-weight: 700;
-            color: #1a1a1a;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
-        }
-        .header-sub {
-            font-size: 15px;
-            color: #999999;
-        }
-        .wrap {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 40px 24px 80px;
-        }
-        .contact-card {
-            border: 1px solid #eeeeee;
-            border-radius: 12px;
-            padding: 32px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .contact-card h2 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 8px;
-            letter-spacing: -0.3px;
-        }
-        .contact-card p {
-            font-size: 14.5px;
-            color: #888888;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        .email-btn {
-            display: inline-block;
-            background: #1a1a1a;
-            color: #ffffff;
-            padding: 14px 36px;
-            border-radius: 100px;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            letter-spacing: 0.3px;
-        }
-        .email-btn:hover {
-            opacity: 0.85;
-            text-decoration: none;
-        }
-        .section-title {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #cccccc;
-            margin-bottom: 24px;
-        }
-        .faq {
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #eeeeee;
-        }
-        .faq:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        .faq-q {
-            font-size: 15px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 6px;
-            letter-spacing: -0.2px;
-        }
-        .faq-a {
-            font-size: 14.5px;
-            color: #888888;
-            line-height: 1.7;
-        }
-        .divider {
-            height: 1px;
-            background: #eeeeee;
-            margin: 40px 0;
-        }
-        .report {
-            margin-bottom: 16px;
-        }
-        .report h2 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            letter-spacing: -0.3px;
-        }
-        .report p {
-            font-size: 14.5px;
-            color: #888888;
-            line-height: 1.7;
-        }
-        .footer {
-            text-align: center;
-            padding: 40px 24px;
-            border-top: 1px solid #eeeeee;
-            margin-top: 40px;
-        }
-        .footer-brand {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #cccccc;
-            margin-bottom: 8px;
-        }
-        .footer p {
-            font-size: 12px;
-            color: #cccccc;
-            margin-bottom: 4px;
-        }
-        .footer-links {
-            margin-top: 16px;
-        }
-        .footer-links a {
-            font-size: 13px;
-            color: #999999;
-            text-decoration: none;
-            margin: 0 12px;
-            letter-spacing: 0.2px;
-        }
-        .footer-links a:hover {
-            color: #1a1a1a;
-        }
-        a { color: #1a1a1a; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Crown &amp; Caddie</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+    .logo-section {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .logo-text {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 40px;
+    }
+    .intro {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+    }
+    p {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    .contact-box {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .contact-box p {
+      margin-bottom: 8px;
+    }
+    .contact-box .email-btn {
+      display: inline-block;
+      background: #1a1a1a;
+      color: #ffffff;
+      padding: 14px 36px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      margin-top: 8px;
+    }
+    .contact-box .email-btn:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #bbb;
+      margin-bottom: 24px;
+    }
+    .faq {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #eee;
+    }
+    .faq:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .faq-q {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+    .faq-a {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.8;
+    }
+    .divider {
+      height: 1px;
+      background: #eee;
+      margin: 48px 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #eee;
+    }
+    .footer-text {
+      font-size: 12px;
+      color: #bbb;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .footer-links {
+      margin-top: 16px;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+      margin: 0 12px;
+    }
+    .footer-links a:hover {
+      color: #1a1a1a;
+    }
+    a { color: #007AFF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #000; color: #f0f0f0; }
+      h1, h2, .faq-q { color: #f0f0f0; }
+      p, .faq-a { color: #aaa; }
+      .intro { color: #999; }
+      .subtitle { color: #666; }
+      .logo-text { color: #f0f0f0; }
+      .section-label { color: #444; }
+      .divider { background: #222; }
+      .faq { border-color: #222; }
+      .contact-box { background: #111; }
+      .contact-box .email-btn { background: #f0f0f0; color: #000; }
+      .footer { border-color: #222; }
+      .footer-text { color: #444; }
+      .footer-links a { color: #666; }
+      .footer-links a:hover { color: #f0f0f0; }
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <div class="brand">Crown & Caddie</div>
-        <h1>Support</h1>
-        <div class="header-sub">We&rsquo;re here to help</div>
+  <div class="container">
+    <div class="logo-section">
+      <div class="logo-text">Crown &amp; Caddie</div>
     </div>
 
-    <div class="wrap">
-        <div class="contact-card">
-            <h2>Get in Touch</h2>
-            <p>Have a question, feedback, or need help with Crown & Caddie?</p>
-            <a href="mailto:crownandcaddie@gmail.com" class="email-btn">Email Us</a>
-        </div>
+    <h1>Support</h1>
+    <p class="subtitle">We&rsquo;re here to help</p>
 
-        <div class="section-title">Frequently Asked Questions</div>
-
-        <div class="faq">
-            <div class="faq-q">How do I create an account?</div>
-            <div class="faq-a">Download Crown & Caddie from the App Store and sign up with your email or Apple ID.</div>
-        </div>
-
-        <div class="faq">
-            <div class="faq-q">How do I list an item for sale?</div>
-            <div class="faq-a">Go to the Marketplace tab, tap the sell button, and follow the prompts to add photos, a description, and your price.</div>
-        </div>
-
-        <div class="faq">
-            <div class="faq-q">Is my payment information secure?</div>
-            <div class="faq-a">Yes. All payments are processed through Stripe, a PCI-compliant payment processor. We never store your full card details.</div>
-        </div>
-
-        <div class="faq">
-            <div class="faq-q">How do I delete my account?</div>
-            <div class="faq-a">Go to Settings &gt; Account &gt; Delete Account within the app. Your profile and personal data will be removed in accordance with our Privacy Policy.</div>
-        </div>
-
-        <div class="faq">
-            <div class="faq-q">How do I report inappropriate content?</div>
-            <div class="faq-a">Tap the three-dot menu on any post, listing, or profile and select &ldquo;Report.&rdquo; Our team reviews all reports.</div>
-        </div>
-
-        <div class="faq">
-            <div class="faq-q">Why do you need my location?</div>
-            <div class="faq-a">Location is used to show nearby golf courses, marketplace listings, and service providers in your area. You can disable it at any time in your device settings.</div>
-        </div>
-
-        <div class="faq">
-            <div class="faq-q">How do I become a seller?</div>
-            <div class="faq-a">Go to Settings &gt; Become a Seller and complete the verification process. Once approved, you can list items on the marketplace.</div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="report">
-            <h2>Report a Problem</h2>
-            <p>If you encounter a bug, crash, or any issue while using Crown & Caddie, please email us with a description of what happened and the device you&rsquo;re using. Include screenshots if possible.</p>
-        </div>
-
-        <div class="footer">
-            <div class="footer-brand">Crown & Caddie</div>
-            <p>&copy; 2026 Crown & Caddie, LLC. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-            </div>
-        </div>
+    <div class="contact-box">
+      <p><strong>Get in Touch</strong></p>
+      <p>Have a question, feedback, or need help with Crown &amp; Caddie?</p>
+      <a href="mailto:crownandcaddie@gmail.com" class="email-btn">Email Us</a>
     </div>
+
+    <div class="section-label">Frequently Asked Questions</div>
+
+    <div class="faq">
+      <div class="faq-q">How do I create an account?</div>
+      <div class="faq-a">Download Crown &amp; Caddie from the App Store and sign up with your email or Apple ID.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">How do I list an item for sale?</div>
+      <div class="faq-a">Go to the Shop tab, tap the sell button, and follow the prompts to add photos, a description, and your price.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">Is my payment information secure?</div>
+      <div class="faq-a">Yes. All payments are processed through Stripe, a PCI-compliant payment processor. We never store your full card details.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">How do I delete my account?</div>
+      <div class="faq-a">Go to Settings &gt; Account &gt; Delete Account within the app. Your profile and personal data will be removed in accordance with our Privacy Policy.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">How do I report inappropriate content?</div>
+      <div class="faq-a">Tap the three-dot menu on any post, listing, or profile and select &ldquo;Report.&rdquo; Our team reviews all reports within 24 hours and takes appropriate action.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">How do I block another user?</div>
+      <div class="faq-a">Tap the three-dot menu on a user&rsquo;s profile or post and select &ldquo;Block User.&rdquo; Blocked users will no longer appear in your feed or be able to contact you.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">Why do you need my location?</div>
+      <div class="faq-a">Location is used to show nearby golf courses, marketplace listings, and service providers in your area. You can disable it at any time in your device settings.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q">How do I become a seller?</div>
+      <div class="faq-a">Go to Settings &gt; Become a Seller and complete the verification process. Once approved, you can list items on the marketplace.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Report a Problem</h2>
+    <p>If you encounter a bug, crash, or any issue while using Crown &amp; Caddie, please email us with a description of what happened and the device you&rsquo;re using. Include screenshots if possible.</p>
+
+    <div class="contact-box">
+      <p><strong>Crown &amp; Caddie, LLC</strong></p>
+      <p>Email: <a href="mailto:crownandcaddie@gmail.com">crownandcaddie@gmail.com</a></p>
+    </div>
+
+    <div class="footer">
+      <p class="footer-text">&copy; 2026 Crown &amp; Caddie, LLC. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
