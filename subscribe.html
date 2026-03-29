@@ -25,22 +25,22 @@
       left: 0;
       right: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
     .nav-inner {
       max-width: 720px;
       margin: 0 auto;
       padding: 0 24px;
-      height: 56px;
+      height: 52px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .nav-brand {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
@@ -49,222 +49,170 @@
     }
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 24px;
       align-items: center;
     }
     .nav-links a {
       font-size: 13px;
-      font-weight: 500;
-      color: #888;
+      font-weight: 400;
+      color: #999;
       text-decoration: none;
-      transition: color 0.3s;
+      transition: color 0.2s;
+      letter-spacing: 0.2px;
     }
     .nav-links a:hover { color: #1a1a1a; }
-    .nav-links a.active { color: #1a1a1a; font-weight: 600; }
+    .nav-links a.active { color: #1a1a1a; font-weight: 500; }
 
-    /* ── Content ── */
+    /* ── Container ── */
     .container {
-      max-width: 720px;
+      max-width: 620px;
       margin: 0 auto;
-      padding: 120px 24px 80px;
+      padding: 140px 24px 80px;
     }
 
     /* ── Hero ── */
     .hero {
       text-align: center;
-      margin-bottom: 64px;
+      margin-bottom: 80px;
     }
-    .crown-svg {
-      width: 48px;
-      height: 48px;
-      margin: 0 auto 20px;
-      display: block;
+    .hero-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 20px;
     }
     h1 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 42px;
+      font-size: 48px;
       font-weight: 700;
-      letter-spacing: -1px;
-      margin-bottom: 12px;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
     .subtitle {
-      font-size: 16px;
+      font-size: 17px;
       color: #888;
       font-weight: 300;
-      max-width: 400px;
-      margin: 0 auto;
+      line-height: 1.6;
     }
 
-    /* ── Benefits ── */
-    .benefits-section {
-      margin-bottom: 64px;
+    /* ── Perks ── */
+    .perks {
+      margin-bottom: 80px;
     }
-    .section-label {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #bbb;
-      margin-bottom: 32px;
-    }
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-    .benefit {
-      padding: 28px 24px;
+    .perk {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 20px 0;
       border-bottom: 1px solid #f0f0f0;
     }
-    .benefit:nth-child(odd) {
-      border-right: 1px solid #f0f0f0;
+    .perk:first-child {
+      border-top: 1px solid #f0f0f0;
     }
-    .benefit:nth-last-child(-n+2) {
-      border-bottom: none;
-    }
-    .benefit-icon {
-      width: 32px;
-      height: 32px;
-      margin-bottom: 14px;
+    .perk-name {
+      font-size: 15px;
+      font-weight: 500;
       color: #1a1a1a;
     }
-    .benefit-title {
+    .perk-detail {
       font-size: 14px;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin-bottom: 4px;
-    }
-    .benefit-desc {
-      font-size: 13px;
-      color: #888;
-      line-height: 1.5;
+      color: #999;
+      font-weight: 400;
+      text-align: right;
     }
 
     /* ── Pricing ── */
     .pricing-section {
-      margin-bottom: 64px;
+      margin-bottom: 56px;
     }
     .pricing-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 12px;
     }
     .pricing-card {
-      background: #fafafa;
-      border: 1.5px solid #eee;
-      border-radius: 16px;
-      padding: 36px 24px 32px;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 32px 24px 28px;
       text-align: center;
       position: relative;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: border-color 0.3s;
     }
     .pricing-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      border-color: #ccc;
     }
     .pricing-card.popular {
       border-color: #1a1a1a;
-      background: #fff;
     }
     .popular-badge {
       position: absolute;
-      top: -11px;
+      top: -10px;
       left: 50%;
       transform: translateX(-50%);
       background: #1a1a1a;
       color: #fff;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 4px 16px;
+      padding: 3px 12px;
       border-radius: 100px;
       white-space: nowrap;
     }
     .plan-name {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
-      color: #999;
+      color: #bbb;
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     .plan-price {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 40px;
+      font-size: 36px;
       font-weight: 700;
       color: #1a1a1a;
-      margin-bottom: 2px;
       line-height: 1;
+      margin-bottom: 4px;
     }
     .plan-price span {
       font-family: 'Inter', sans-serif;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 400;
-      color: #999;
+      color: #bbb;
     }
     .plan-detail {
-      font-size: 13px;
-      color: #999;
+      font-size: 12px;
+      color: #bbb;
       margin-bottom: 24px;
-      min-height: 20px;
+      min-height: 18px;
     }
     .subscribe-btn {
-      display: inline-block;
+      display: block;
       background: #1a1a1a;
       color: #ffffff;
-      padding: 14px 0;
-      border-radius: 100px;
-      font-size: 14px;
+      padding: 12px 0;
+      border-radius: 8px;
+      font-size: 13px;
       font-weight: 600;
-      text-decoration: none;
-      letter-spacing: 0.3px;
       border: none;
       cursor: pointer;
       width: 100%;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: opacity 0.2s;
       font-family: inherit;
+      letter-spacing: 0.2px;
     }
-    .subscribe-btn:hover {
-      opacity: 0.85;
-      transform: translateY(-1px);
-    }
+    .subscribe-btn:hover { opacity: 0.8; }
     .subscribe-btn:disabled {
-      opacity: 0.4;
+      opacity: 0.3;
       cursor: not-allowed;
-      transform: none;
-    }
-
-    /* ── Status Messages ── */
-    .status-msg {
-      text-align: center;
-      padding: 40px 32px;
-      border: 1.5px solid #eee;
-      border-radius: 16px;
-      margin-bottom: 48px;
-    }
-    .status-msg.success { border-color: #34C759; }
-    .status-msg.cancelled { border-color: #FF9500; }
-    .status-msg .status-icon {
-      width: 48px;
-      height: 48px;
-      margin: 0 auto 16px;
-      display: block;
-    }
-    .status-msg h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-    .status-msg p {
-      font-size: 15px;
-      color: #666;
-      max-width: 360px;
-      margin: 0 auto;
     }
     .error-msg {
       color: #FF3B30;
-      font-size: 14px;
+      font-size: 13px;
       text-align: center;
       margin-top: 16px;
       display: none;
@@ -273,39 +221,84 @@
     /* ── Fine Print ── */
     .fine-print {
       text-align: center;
-      font-size: 13px;
-      color: #bbb;
+      font-size: 12px;
+      color: #ccc;
       line-height: 1.8;
-      max-width: 480px;
-      margin: 0 auto 48px;
+      margin-bottom: 80px;
     }
-    .divider {
-      height: 1px;
-      background: #eee;
-      margin: 48px 0;
+
+    /* ── Status Messages ── */
+    .status-msg {
+      text-align: center;
+      padding: 48px 24px;
+      margin-bottom: 48px;
     }
+    .status-msg h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .status-msg p {
+      font-size: 15px;
+      color: #888;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    .status-check {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #34C759;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .status-check svg { width: 20px; height: 20px; }
+    .status-warn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #FF9500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .status-warn svg { width: 20px; height: 20px; }
+    .status-info {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #007AFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .status-info svg { width: 20px; height: 20px; }
 
     /* ── Footer ── */
     .footer {
       text-align: center;
-      padding-top: 24px;
-      border-top: 1px solid #eee;
+      padding-top: 20px;
+      border-top: 1px solid #f0f0f0;
     }
     .footer-text {
-      font-size: 12px;
-      color: #bbb;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      font-size: 11px;
+      color: #ccc;
+      letter-spacing: 0.5px;
     }
     .footer-links {
-      margin-top: 16px;
+      margin-top: 12px;
     }
     .footer-links a {
-      font-size: 13px;
-      color: #888;
+      font-size: 12px;
+      color: #bbb;
       text-decoration: none;
-      margin: 0 12px;
-      transition: color 0.3s;
+      margin: 0 10px;
+      transition: color 0.2s;
     }
     .footer-links a:hover { color: #1a1a1a; }
 
@@ -313,52 +306,45 @@
 
     /* ── Responsive ── */
     @media (max-width: 480px) {
-      h1 { font-size: 32px; }
-      .benefit-grid { grid-template-columns: 1fr; }
-      .benefit { border-right: none !important; }
-      .benefit:last-child { border-bottom: none; }
-      .pricing-grid { grid-template-columns: 1fr; }
       .container { padding: 100px 20px 60px; }
+      h1 { font-size: 36px; }
+      .pricing-grid { grid-template-columns: 1fr; gap: 12px; }
       .nav-links { gap: 16px; }
-      .nav-links a { font-size: 12px; }
+      .perk { flex-direction: column; gap: 2px; }
+      .perk-detail { text-align: left; }
     }
 
-    /* ── Dark Mode ── */
+    /* ── Dark ── */
     @media (prefers-color-scheme: dark) {
       body { background: #000; color: #f0f0f0; }
-      .nav { background: rgba(0,0,0,0.85); border-color: rgba(255,255,255,0.06); }
+      .nav { background: rgba(0,0,0,0.92); border-color: rgba(255,255,255,0.05); }
       .nav-brand { color: #f0f0f0; }
       .nav-links a { color: #555; }
       .nav-links a:hover, .nav-links a.active { color: #f0f0f0; }
       h1, h2 { color: #f0f0f0; }
+      .hero-label { color: #444; }
       .subtitle { color: #555; }
-      .section-label { color: #444; }
-      .benefit { border-color: #1a1a1a; }
-      .benefit-icon { color: #f0f0f0; }
-      .benefit-title { color: #f0f0f0; }
-      .benefit-desc { color: #666; }
-      .pricing-card { background: #0a0a0a; border-color: #1a1a1a; }
-      .pricing-card:hover { box-shadow: 0 12px 40px rgba(255,255,255,0.03); }
-      .pricing-card.popular { border-color: #f0f0f0; background: #0d0d0d; }
+      .perk { border-color: #1a1a1a; }
+      .perk-name { color: #e0e0e0; }
+      .perk-detail { color: #555; }
+      .pricing-card { border-color: #1a1a1a; }
+      .pricing-card:hover { border-color: #333; }
+      .pricing-card.popular { border-color: #f0f0f0; }
       .popular-badge { background: #f0f0f0; color: #000; }
       .plan-price { color: #f0f0f0; }
-      .plan-name { color: #555; }
-      .plan-detail { color: #555; }
+      .plan-name { color: #444; }
+      .plan-detail { color: #444; }
       .subscribe-btn { background: #f0f0f0; color: #000; }
-      .status-msg { border-color: #222; }
-      .status-msg p { color: #888; }
-      .fine-print { color: #444; }
-      .divider { background: #1a1a1a; }
+      .fine-print { color: #333; }
+      .status-msg p { color: #666; }
       .footer { border-color: #1a1a1a; }
-      .footer-text { color: #444; }
-      .footer-links a { color: #555; }
+      .footer-text { color: #333; }
+      .footer-links a { color: #444; }
       .footer-links a:hover { color: #f0f0f0; }
-      .crown-svg { color: #f0f0f0; }
     }
   </style>
 </head>
 <body>
-  <!-- Nav -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand">Crown &amp; Caddie</a>
@@ -371,131 +357,84 @@
   </nav>
 
   <div class="container">
-    <!-- Success state -->
-    <div id="success-state" class="status-msg success hidden">
-      <svg class="status-icon" viewBox="0 0 48 48" fill="none" stroke="#34C759" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><polyline points="16 24 22 30 32 18"/></svg>
+    <!-- Success -->
+    <div id="success-state" class="status-msg hidden">
+      <div class="status-check"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 12 10 16 18 8"/></svg></div>
       <h2>Welcome to Crown</h2>
-      <p>You're now a Crown member. Open the Crown &amp; Caddie app to see your badge and start enjoying your perks.</p>
+      <p>You're now a Crown member. Open the app to see your badge and enjoy your perks.</p>
     </div>
 
-    <!-- Cancelled state -->
-    <div id="cancelled-state" class="status-msg cancelled hidden">
-      <svg class="status-icon" viewBox="0 0 48 48" fill="none" stroke="#FF9500" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><line x1="24" y1="16" x2="24" y2="26"/><circle cx="24" cy="32" r="1" fill="#FF9500"/></svg>
-      <h2>Subscription Not Completed</h2>
-      <p>No worries &mdash; you can subscribe anytime. Your perks will activate instantly.</p>
+    <!-- Cancelled -->
+    <div id="cancelled-state" class="status-msg hidden">
+      <div class="status-warn"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="8" x2="12" y2="13"/><circle cx="12" cy="16.5" r="0.5" fill="#fff"/></svg></div>
+      <h2>Not Completed</h2>
+      <p>No worries. You can subscribe anytime and your perks activate instantly.</p>
     </div>
 
-    <!-- Portal return state -->
+    <!-- Portal return -->
     <div id="portal-state" class="status-msg hidden">
-      <svg class="status-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20l6 6 12-12"/><rect x="6" y="6" width="36" height="36" rx="8"/></svg>
+      <div class="status-info"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 12 10 16 18 8"/></svg></div>
       <h2>Settings Updated</h2>
       <p>Your subscription changes have been saved. Open the app to continue.</p>
     </div>
 
-    <!-- Main content -->
+    <!-- Main -->
     <div id="main-content">
       <div class="hero">
-        <!-- Minimal crown SVG icon -->
-        <svg class="crown-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 36h36"/>
-          <path d="M8 36l2-20 8 8 6-12 6 12 8-8 2 20"/>
-          <circle cx="10" cy="14" r="2"/>
-          <circle cx="24" cy="10" r="2"/>
-          <circle cx="38" cy="14" r="2"/>
-        </svg>
-        <h1>Crown Membership</h1>
-        <p class="subtitle">Lower fees, free boosts, and exclusive perks for serious golfers.</p>
+        <div class="hero-label">Membership</div>
+        <h1>Crown</h1>
+        <p class="subtitle">Sell more. Keep more. Stand out.</p>
       </div>
 
-      <!-- Benefits -->
-      <div class="benefits-section">
-        <div class="section-label">What You Get</div>
-        <div class="benefit-grid">
-
-          <div class="benefit">
-            <svg class="benefit-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 3v26M22 8H13a4 4 0 000 8h6a4 4 0 010 8H10"/>
-            </svg>
-            <div class="benefit-title">2% Marketplace Fee</div>
-            <div class="benefit-desc">Instead of 5%. Keep more of every sale.</div>
-          </div>
-
-          <div class="benefit">
-            <svg class="benefit-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="16" cy="16" r="12"/>
-              <path d="M16 10v6l4 4"/>
-            </svg>
-            <div class="benefit-title">0% Challenge Fee</div>
-            <div class="benefit-desc">Full entry goes to the prize pool.</div>
-          </div>
-
-          <div class="benefit">
-            <svg class="benefit-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 4l4 8h8l-6.5 5 2.5 9L16 21l-8 5 2.5-9L4 12h8z"/>
-            </svg>
-            <div class="benefit-title">3 Free Boosts</div>
-            <div class="benefit-desc">Monthly listing boosts included.</div>
-          </div>
-
-          <div class="benefit">
-            <svg class="benefit-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 28h20"/>
-              <path d="M8 28l1.5-14 5.5 5.5L16 12l5.5 5.5L22 14l1.5 14"/>
-              <circle cx="9.5" cy="12" r="1.5"/>
-              <circle cx="16" cy="9.5" r="1.5"/>
-              <circle cx="22.5" cy="12" r="1.5"/>
-            </svg>
-            <div class="benefit-title">Crown Badge</div>
-            <div class="benefit-desc">Stand out on your profile and listings.</div>
-          </div>
-
-          <div class="benefit">
-            <svg class="benefit-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="4" y="6" width="24" height="20" rx="3"/>
-              <polyline points="8 18 13 13 17 17 24 10"/>
-              <circle cx="22" cy="12" r="1.5"/>
-            </svg>
-            <div class="benefit-title">Full Analytics</div>
-            <div class="benefit-desc">Track views, conversions, and performance.</div>
-          </div>
-
-          <div class="benefit">
-            <svg class="benefit-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 16l7-7 5 5L28 4"/>
-              <polyline points="20 4 28 4 28 12"/>
-            </svg>
-            <div class="benefit-title">Priority Support</div>
-            <div class="benefit-desc">Faster responses from our team.</div>
-          </div>
-
+      <div class="perks">
+        <div class="perk">
+          <span class="perk-name">Marketplace seller fee</span>
+          <span class="perk-detail">2% instead of 5%</span>
+        </div>
+        <div class="perk">
+          <span class="perk-name">Challenge platform fee</span>
+          <span class="perk-detail">Waived</span>
+        </div>
+        <div class="perk">
+          <span class="perk-name">Listing boosts</span>
+          <span class="perk-detail">3 per month, included</span>
+        </div>
+        <div class="perk">
+          <span class="perk-name">Crown badge</span>
+          <span class="perk-detail">Profile &amp; listings</span>
+        </div>
+        <div class="perk">
+          <span class="perk-name">Seller analytics</span>
+          <span class="perk-detail">Full access</span>
+        </div>
+        <div class="perk">
+          <span class="perk-name">Support</span>
+          <span class="perk-detail">Priority</span>
         </div>
       </div>
 
-      <!-- Pricing -->
       <div class="pricing-section">
-        <div class="section-label">Choose Your Plan</div>
         <div class="pricing-grid">
           <div class="pricing-card">
             <div class="plan-name">Monthly</div>
             <div class="plan-price">$14.99<span>/mo</span></div>
             <div class="plan-detail">Billed monthly</div>
-            <button class="subscribe-btn" onclick="subscribe('monthly')" id="btn-monthly">Subscribe</button>
+            <button class="subscribe-btn" onclick="subscribe('monthly')" id="btn-monthly">Get Crown</button>
           </div>
           <div class="pricing-card popular">
-            <div class="popular-badge">Best Value</div>
+            <div class="popular-badge">Save $15/yr</div>
             <div class="plan-name">Annual</div>
             <div class="plan-price">$13.75<span>/mo</span></div>
-            <div class="plan-detail">$164.99/yr &mdash; save $15</div>
-            <button class="subscribe-btn" onclick="subscribe('yearly')" id="btn-yearly">Subscribe</button>
+            <div class="plan-detail">$164.99 billed yearly</div>
+            <button class="subscribe-btn" onclick="subscribe('yearly')" id="btn-yearly">Get Crown</button>
           </div>
         </div>
         <p id="error-msg" class="error-msg"></p>
       </div>
 
-      <p class="fine-print">Cancel anytime from your subscription settings. Perks remain active until the end of your billing period. Payments processed securely by Stripe.</p>
+      <p class="fine-print">Cancel anytime. Perks remain through end of billing period. Secured by Stripe.</p>
     </div>
 
-    <!-- Footer -->
     <div class="footer">
       <p class="footer-text">&copy; 2025 Crown &amp; Caddie, LLC</p>
       <div class="footer-links">
@@ -507,70 +446,45 @@
   </div>
 
   <script>
-    const SUPABASE_URL = 'https://feoigltttrquaatdxsdp.supabase.co';
+    var SUPABASE_URL = 'https://feoigltttrquaatdxsdp.supabase.co';
 
     (function() {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('success') === 'true') {
+      var p = new URLSearchParams(window.location.search);
+      if (p.get('success') === 'true') {
         document.getElementById('main-content').classList.add('hidden');
         document.getElementById('success-state').classList.remove('hidden');
-      } else if (params.get('cancelled') === 'true') {
+      } else if (p.get('cancelled') === 'true') {
         document.getElementById('cancelled-state').classList.remove('hidden');
-      } else if (params.get('portal_return') === 'true') {
+      } else if (p.get('portal_return') === 'true') {
         document.getElementById('main-content').classList.add('hidden');
         document.getElementById('portal-state').classList.remove('hidden');
       }
     })();
 
-    function getUserId() {
-      return new URLSearchParams(window.location.search).get('user_id');
-    }
+    function subscribe(plan) {
+      var userId = new URLSearchParams(window.location.search).get('user_id');
+      if (!userId) { showError('Please open this page from the Crown & Caddie app.'); return; }
 
-    async function subscribe(plan) {
-      const userId = getUserId();
-      if (!userId) {
-        showError('Please open this page from the Crown & Caddie app.');
-        return;
-      }
-
-      const btn = document.getElementById('btn-' + plan);
-      const otherBtn = document.getElementById('btn-' + (plan === 'monthly' ? 'yearly' : 'monthly'));
-      btn.disabled = true;
-      otherBtn.disabled = true;
+      var btn = document.getElementById('btn-' + plan);
+      var other = document.getElementById('btn-' + (plan === 'monthly' ? 'yearly' : 'monthly'));
+      btn.disabled = true; other.disabled = true;
       btn.textContent = 'Loading\u2026';
-      hideError();
 
-      try {
-        const res = await fetch(SUPABASE_URL + '/functions/v1/create-checkout-session', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ user_id: userId, plan: plan }),
-        });
-        const data = await res.json();
-        if (data.success && data.url) {
-          window.location.href = data.url;
-        } else {
-          showError(data.error || 'Something went wrong. Please try again.');
-          btn.disabled = false;
-          otherBtn.disabled = false;
-          btn.textContent = 'Subscribe';
-        }
-      } catch (err) {
-        showError('Network error. Please check your connection and try again.');
-        btn.disabled = false;
-        otherBtn.disabled = false;
-        btn.textContent = 'Subscribe';
-      }
+      fetch(SUPABASE_URL + '/functions/v1/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user_id: userId, plan: plan })
+      })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.success && data.url) { window.location.href = data.url; }
+        else { showError(data.error || 'Something went wrong.'); reset(btn, other); }
+      })
+      .catch(function() { showError('Network error. Check your connection.'); reset(btn, other); });
     }
 
-    function showError(msg) {
-      var el = document.getElementById('error-msg');
-      el.textContent = msg;
-      el.style.display = 'block';
-    }
-    function hideError() {
-      document.getElementById('error-msg').style.display = 'none';
-    }
+    function reset(btn, other) { btn.disabled = false; other.disabled = false; btn.textContent = 'Get Crown'; }
+    function showError(m) { var e = document.getElementById('error-msg'); e.textContent = m; e.style.display = 'block'; }
   </script>
 </body>
 </html>
