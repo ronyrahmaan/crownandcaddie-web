@@ -217,6 +217,21 @@
       margin-top: 16px;
       display: none;
     }
+    .app-notice {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #999;
+      line-height: 1.6;
+    }
+    .app-notice a {
+      color: #1a1a1a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #ccc;
+      transition: border-color 0.2s;
+    }
+    .app-notice a:hover { border-color: #1a1a1a; }
 
     /* ── Fine Print ── */
     .fine-print {
@@ -336,6 +351,9 @@
       .plan-detail { color: #444; }
       .subscribe-btn { background: #f0f0f0; color: #000; }
       .fine-print { color: #333; }
+      .app-notice { color: #555; }
+      .app-notice a { color: #f0f0f0; border-color: #444; }
+      .app-notice a:hover { border-color: #f0f0f0; }
       .status-msg p { color: #666; }
       .footer { border-color: #1a1a1a; }
       .footer-text { color: #333; }
@@ -430,6 +448,10 @@
           </div>
         </div>
         <p id="error-msg" class="error-msg"></p>
+        <div id="app-notice" class="app-notice hidden">
+          To subscribe, open this page from the Crown &amp; Caddie app.<br>
+          Don't have it? <a href="https://apps.apple.com/app/crown-caddie/id6759308912">Download on the App Store</a>
+        </div>
       </div>
 
       <p class="fine-print">Cancel anytime. Perks remain through end of billing period. Secured by Stripe.</p>
@@ -461,9 +483,17 @@
       }
     })();
 
+    // Show notice for direct visitors (no user_id)
+    (function() {
+      if (!new URLSearchParams(window.location.search).get('user_id')) {
+        var notice = document.getElementById('app-notice');
+        if (notice) notice.classList.remove('hidden');
+      }
+    })();
+
     function subscribe(plan) {
       var userId = new URLSearchParams(window.location.search).get('user_id');
-      if (!userId) { showError('Please open this page from the Crown & Caddie app.'); return; }
+      if (!userId) return;
 
       var btn = document.getElementById('btn-' + plan);
       var other = document.getElementById('btn-' + (plan === 'monthly' ? 'yearly' : 'monthly'));
