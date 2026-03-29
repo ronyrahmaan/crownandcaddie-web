@@ -21,7 +21,7 @@
     .container {
       max-width: 720px;
       margin: 0 auto;
-      padding: 80px 24px 80px;
+      padding: 120px 24px 80px;
     }
 
     /* ── Hero ── */
@@ -332,9 +332,105 @@
       h1 { font-size: 32px; }
       .merch-heading { font-size: 28px; }
       .feature-grid { grid-template-columns: 1fr; gap: 20px; }
-      .container { padding: 60px 20px 60px; }
+      .container { padding: 100px 20px 60px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 12px; }
       .merch-section { padding: 48px 0; }
       .merch-subheading { margin-bottom: 36px; }
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: #1a1a1a; }
+    .nav-links a.active { color: #1a1a1a; font-weight: 600; }
+
+    /* ── Crown CTA Section ── */
+    .crown-cta {
+      text-align: center;
+      padding: 48px 32px;
+      border: 1.5px solid #eee;
+      border-radius: 16px;
+      margin-bottom: 48px;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .crown-cta:hover {
+      border-color: #ccc;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+    }
+    .crown-cta-icon {
+      width: 36px;
+      height: 36px;
+      margin: 0 auto 16px;
+      display: block;
+    }
+    .crown-cta h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .crown-cta p {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+    .crown-cta-btn {
+      display: inline-block;
+      background: transparent;
+      color: #1a1a1a;
+      padding: 12px 32px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      border: 1.5px solid #1a1a1a;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .crown-cta-btn:hover {
+      background: #1a1a1a;
+      color: #fff;
+      transform: translateY(-1px);
+      text-decoration: none;
     }
 
     /* ── Theme Toggle ── */
@@ -403,6 +499,17 @@
       }
       body:not([data-theme="light"]) .theme-toggle { background: rgba(255,255,255,0.1); }
       body:not([data-theme="light"]) .theme-toggle:hover { background: rgba(255,255,255,0.18); }
+      body:not([data-theme="light"]) .nav { background: rgba(0,0,0,0.85); border-color: rgba(255,255,255,0.06); }
+      body:not([data-theme="light"]) .nav-brand { color: #f0f0f0; }
+      body:not([data-theme="light"]) .nav-links a { color: #555; }
+      body:not([data-theme="light"]) .nav-links a:hover,
+      body:not([data-theme="light"]) .nav-links a.active { color: #f0f0f0; }
+      body:not([data-theme="light"]) .crown-cta { border-color: #222; }
+      body:not([data-theme="light"]) .crown-cta:hover { border-color: #444; box-shadow: 0 8px 30px rgba(255,255,255,0.02); }
+      body:not([data-theme="light"]) .crown-cta h3 { color: #f0f0f0; }
+      body:not([data-theme="light"]) .crown-cta p { color: #555; }
+      body:not([data-theme="light"]) .crown-cta-btn { color: #f0f0f0; border-color: #f0f0f0; }
+      body:not([data-theme="light"]) .crown-cta-btn:hover { background: #f0f0f0; color: #000; }
     }
 
     /* ── Manual Dark Mode (override) ── */
@@ -442,9 +549,31 @@
     }
     body[data-theme="dark"] .theme-toggle { background: rgba(255,255,255,0.1); }
     body[data-theme="dark"] .theme-toggle:hover { background: rgba(255,255,255,0.18); }
+    body[data-theme="dark"] .nav { background: rgba(0,0,0,0.85); border-color: rgba(255,255,255,0.06); }
+    body[data-theme="dark"] .nav-brand { color: #f0f0f0; }
+    body[data-theme="dark"] .nav-links a { color: #555; }
+    body[data-theme="dark"] .nav-links a:hover,
+    body[data-theme="dark"] .nav-links a.active { color: #f0f0f0; }
+    body[data-theme="dark"] .crown-cta { border-color: #222; }
+    body[data-theme="dark"] .crown-cta:hover { border-color: #444; box-shadow: 0 8px 30px rgba(255,255,255,0.02); }
+    body[data-theme="dark"] .crown-cta h3 { color: #f0f0f0; }
+    body[data-theme="dark"] .crown-cta p { color: #555; }
+    body[data-theme="dark"] .crown-cta-btn { color: #f0f0f0; border-color: #f0f0f0; }
+    body[data-theme="dark"] .crown-cta-btn:hover { background: #f0f0f0; color: #000; }
   </style>
 </head>
 <body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Crown &amp; Caddie</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="subscribe.html">Crown</a>
+        <a href="support.html">Support</a>
+      </div>
+    </div>
+  </nav>
   <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
     <span class="icon-sun">&#9788;</span>
     <span class="icon-moon">&#9790;</span>
@@ -513,6 +642,22 @@
       </div>
 
       <p class="reveal reveal-delay-4 merch-more">More styles dropping soon.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Crown Membership CTA -->
+    <div class="reveal crown-cta">
+      <svg class="crown-cta-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 36h36"/>
+        <path d="M8 36l2-20 8 8 6-12 6 12 8-8 2 20"/>
+        <circle cx="10" cy="14" r="2"/>
+        <circle cx="24" cy="10" r="2"/>
+        <circle cx="38" cy="14" r="2"/>
+      </svg>
+      <h3>Crown Membership</h3>
+      <p>Lower fees, free boosts, and exclusive perks. Starting at $13.75/mo.</p>
+      <a href="subscribe.html" class="crown-cta-btn">Learn More</a>
     </div>
 
     <div class="divider"></div>

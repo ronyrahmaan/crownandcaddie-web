@@ -143,9 +143,56 @@
     .footer-links a:hover {
       color: #1a1a1a;
     }
+    /* ── Nav ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    .nav-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-links a.nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a.nav-link:hover { color: #1a1a1a; }
+    .nav-links a.nav-link.active { color: #1a1a1a; font-weight: 600; }
     a { color: #007AFF; text-decoration: none; }
     a:hover { text-decoration: underline; }
     @media (prefers-color-scheme: dark) {
+      .nav { background: rgba(0,0,0,0.85); border-color: rgba(255,255,255,0.06); }
+      .nav-brand { color: #f0f0f0; }
+      .nav-links a.nav-link { color: #555; }
+      .nav-links a.nav-link:hover, .nav-links a.nav-link.active { color: #f0f0f0; }
       body { background: #000; color: #f0f0f0; }
       h1, h2, .faq-q { color: #f0f0f0; }
       p, .faq-a { color: #aaa; }
@@ -165,10 +212,18 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo-section">
-      <div class="logo-text">Crown &amp; Caddie</div>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Crown &amp; Caddie</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="subscribe.html" class="nav-link">Crown</a>
+        <a href="support.html" class="nav-link active">Support</a>
+      </div>
     </div>
+  </nav>
+  <div class="container" style="padding-top: 100px;">
 
     <h1>Support</h1>
     <p class="subtitle">We&rsquo;re here to help</p>
