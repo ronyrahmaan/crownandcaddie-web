@@ -141,10 +141,26 @@
       margin-bottom: 56px;
       line-height: 1.6;
     }
+    .merch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    @media (max-width: 768px) {
+      .merch-grid { grid-template-columns: 1fr; max-width: 400px; }
+    }
     .merch-product {
       position: relative;
-      max-width: 520px;
-      margin: 0 auto;
+    }
+    .merch-product-price {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-top: 8px;
+      letter-spacing: -0.3px;
     }
     .merch-image-wrapper {
       position: relative;
@@ -480,6 +496,7 @@
       body:not([data-theme="light"]) .merch-badge { background: rgba(240, 240, 240, 0.9); color: #000; }
       body:not([data-theme="light"]) .merch-product-name { color: #f0f0f0; }
       body:not([data-theme="light"]) .merch-product-detail { color: #555; }
+      body:not([data-theme="light"]) .merch-product-price { color: #f0f0f0; }
       body:not([data-theme="light"]) .merch-notify-btn { color: #f0f0f0; border-color: #f0f0f0; }
       body:not([data-theme="light"]) .merch-notify-btn:hover { background: #f0f0f0; color: #000; box-shadow: 0 8px 30px rgba(255,255,255,0.08); }
       body:not([data-theme="light"]) .merch-more { color: #444; }
@@ -530,6 +547,7 @@
     body[data-theme="dark"] .merch-badge { background: rgba(240, 240, 240, 0.9); color: #000; }
     body[data-theme="dark"] .merch-product-name { color: #f0f0f0; }
     body[data-theme="dark"] .merch-product-detail { color: #555; }
+    body[data-theme="dark"] .merch-product-price { color: #f0f0f0; }
     body[data-theme="dark"] .merch-notify-btn { color: #f0f0f0; border-color: #f0f0f0; }
     body[data-theme="dark"] .merch-notify-btn:hover { background: #f0f0f0; color: #000; box-shadow: 0 8px 30px rgba(255,255,255,0.08); }
     body[data-theme="dark"] .merch-more { color: #444; }
@@ -622,19 +640,49 @@
       <h2 class="reveal reveal-delay-1 merch-heading shimmer">Crown &amp; Caddie Apparel</h2>
       <p class="reveal reveal-delay-2 merch-subheading">Crafted for the course and beyond.</p>
 
-      <div class="reveal reveal-delay-3 merch-product">
-        <div class="merch-image-wrapper">
-          <img src="images/polo-black.png" alt="Crown &amp; Caddie Performance Polo in Black with gold embroidered C&amp;C logo">
-          <div class="merch-badge">Coming Soon</div>
+      <div class="merch-grid">
+        <div class="reveal reveal-delay-3 merch-product">
+          <div class="merch-image-wrapper">
+            <img src="images/polo-black.png" alt="C&amp;C Performance Polo — Black">
+            <div class="merch-badge">Coming Soon</div>
+          </div>
+          <div class="merch-product-info">
+            <div class="merch-product-name">C&amp;C Performance Polo</div>
+            <div class="merch-product-detail">Black &middot; Gold Embroidered Logo</div>
+            <div class="merch-product-price">$84.99</div>
+          </div>
         </div>
-        <div class="merch-product-info">
-          <div class="merch-product-name">C&amp;C Performance Polo</div>
-          <div class="merch-product-detail">Premium Sport-Tek &middot; Embroidered Logo &middot; Black</div>
-          <a href="mailto:hello@crownandcaddie.com?subject=Merch%20Interest%20-%20C%26C%20Performance%20Polo" class="merch-notify-btn">Get Notified</a>
+
+        <div class="reveal reveal-delay-3 merch-product">
+          <div class="merch-image-wrapper">
+            <img src="images/polo-navy.png" alt="C&amp;C Performance Polo — Navy &amp; White">
+            <div class="merch-badge">Coming Soon</div>
+          </div>
+          <div class="merch-product-info">
+            <div class="merch-product-name">C&amp;C Performance Polo</div>
+            <div class="merch-product-detail">Navy &amp; White &middot; Gold Embroidered Logo</div>
+            <div class="merch-product-price">$84.99</div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-4 merch-product">
+          <div class="merch-image-wrapper">
+            <img src="images/polo-white.png" alt="C&amp;C Performance Polo — White &amp; Gold">
+            <div class="merch-badge">Coming Soon</div>
+          </div>
+          <div class="merch-product-info">
+            <div class="merch-product-name">C&amp;C Performance Polo</div>
+            <div class="merch-product-detail">White &amp; Gold &middot; Gold Embroidered Logo</div>
+            <div class="merch-product-price">$84.99</div>
+          </div>
         </div>
       </div>
 
-      <p class="reveal reveal-delay-4 merch-more">More styles dropping soon.</p>
+      <div class="reveal reveal-delay-4" style="text-align: center; margin-top: 40px;">
+        <a href="mailto:hello@crownandcaddie.com?subject=C%26C%20Apparel%20Inquiry" class="merch-notify-btn">Inquire About Purchasing</a>
+      </div>
+
+      <p class="reveal reveal-delay-4 merch-more">Premium Sport-Tek fabric &middot; Embroidered C&amp;C crown logo &middot; Made for the course.</p>
     </div>
 
     <div class="divider"></div>
