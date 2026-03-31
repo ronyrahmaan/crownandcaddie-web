@@ -141,26 +141,47 @@
       margin-bottom: 56px;
       line-height: 1.6;
     }
-    .merch-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 960px;
+    .merch-hero {
+      max-width: 480px;
       margin: 0 auto;
+      text-align: center;
     }
-    @media (max-width: 768px) {
-      .merch-grid { grid-template-columns: 1fr; max-width: 400px; }
-    }
-    .merch-product {
+    .merch-hero-image {
       position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #0a0a0a;
+      aspect-ratio: 3 / 4;
+      cursor: pointer;
+    }
+    .merch-hero-image img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      transition: opacity 0.35s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .merch-hero-image img.fading { opacity: 0; }
+    .merch-hero-image:hover img { transform: scale(1.03); }
+    .merch-swatches {
+      display: flex; justify-content: center; gap: 16px; margin-top: 24px;
+    }
+    .merch-swatch {
+      width: 32px; height: 32px; border-radius: 50%;
+      border: 2.5px solid transparent; cursor: pointer;
+      transition: border-color 0.2s, transform 0.15s;
+      outline: none;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+    }
+    .merch-swatch:hover { transform: scale(1.15); }
+    .merch-swatch.active { border-color: #1a1a1a; }
+    .merch-hero-info { margin-top: 24px; }
+    .merch-hero-details {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px; color: #999; margin-top: 12px; letter-spacing: 0.3px;
     }
     .merch-product-price {
       font-family: 'Inter', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-top: 8px;
-      letter-spacing: -0.3px;
+      font-size: 22px; font-weight: 700; color: #1a1a1a;
+      margin-top: 10px; letter-spacing: -0.3px;
     }
     /* Lightbox */
     .lightbox-overlay {
@@ -195,30 +216,7 @@
     }
     .lightbox-info .lb-inquire:hover { opacity: 0.8; }
     @keyframes lbFadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-    .merch-image-wrapper {
-      position: relative;
-      overflow: hidden;
-      border-radius: 16px;
-      background: #f5f5f5;
-      aspect-ratio: 3 / 4;
-      cursor: pointer;
-    }
-    .merch-image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .merch-image-wrapper:hover img {
-      transform: scale(1.04);
-    }
-    .merch-image-wrapper::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.04) 100%);
-      pointer-events: none;
-    }
+    /* (merch-image-wrapper removed — replaced by merch-hero-image) */
     .merch-badge {
       position: absolute;
       top: 20px;
@@ -525,11 +523,13 @@
       body:not([data-theme="light"]) .merch-label { color: #444; }
       body:not([data-theme="light"]) .merch-heading { color: #f0f0f0; }
       body:not([data-theme="light"]) .merch-subheading { color: #555; }
-      body:not([data-theme="light"]) .merch-image-wrapper { background: #111; }
+      body:not([data-theme="light"]) .merch-hero-image { background: #0a0a0a; }
       body:not([data-theme="light"]) .merch-badge { background: rgba(240, 240, 240, 0.9); color: #000; }
       body:not([data-theme="light"]) .merch-product-name { color: #f0f0f0; }
       body:not([data-theme="light"]) .merch-product-detail { color: #555; }
       body:not([data-theme="light"]) .merch-product-price { color: #f0f0f0; }
+      body:not([data-theme="light"]) .merch-swatch.active { border-color: #f0f0f0; }
+      body:not([data-theme="light"]) .merch-hero-details { color: #555; }
       body:not([data-theme="light"]) .merch-notify-btn { color: #f0f0f0; border-color: #f0f0f0; }
       body:not([data-theme="light"]) .merch-notify-btn:hover { background: #f0f0f0; color: #000; box-shadow: 0 8px 30px rgba(255,255,255,0.08); }
       body:not([data-theme="light"]) .merch-more { color: #444; }
@@ -576,11 +576,13 @@
     body[data-theme="dark"] .merch-label { color: #444; }
     body[data-theme="dark"] .merch-heading { color: #f0f0f0; }
     body[data-theme="dark"] .merch-subheading { color: #555; }
-    body[data-theme="dark"] .merch-image-wrapper { background: #111; }
+    body[data-theme="dark"] .merch-hero-image { background: #0a0a0a; }
     body[data-theme="dark"] .merch-badge { background: rgba(240, 240, 240, 0.9); color: #000; }
     body[data-theme="dark"] .merch-product-name { color: #f0f0f0; }
     body[data-theme="dark"] .merch-product-detail { color: #555; }
     body[data-theme="dark"] .merch-product-price { color: #f0f0f0; }
+    body[data-theme="dark"] .merch-swatch.active { border-color: #f0f0f0; }
+    body[data-theme="dark"] .merch-hero-details { color: #555; }
     body[data-theme="dark"] .merch-notify-btn { color: #f0f0f0; border-color: #f0f0f0; }
     body[data-theme="dark"] .merch-notify-btn:hover { background: #f0f0f0; color: #000; box-shadow: 0 8px 30px rgba(255,255,255,0.08); }
     body[data-theme="dark"] .merch-more { color: #444; }
@@ -667,55 +669,34 @@
 
     <div class="divider"></div>
 
-    <!-- Merchandise -->
+    <!-- Merchandise — Single Hero + Color Swatches -->
     <div class="merch-section">
       <div class="reveal merch-label">Official Collection</div>
       <h2 class="reveal reveal-delay-1 merch-heading shimmer">Crown &amp; Caddie Apparel</h2>
       <p class="reveal reveal-delay-2 merch-subheading">Crafted for the course and beyond.</p>
 
-      <div class="merch-grid">
-        <div class="reveal reveal-delay-3 merch-product" onclick="openLightbox('images/polo-black.png','C&amp;C Performance Polo','Black · Gold Embroidered Logo')">
-          <div class="merch-image-wrapper">
-            <img src="images/polo-black.png" alt="C&amp;C Performance Polo — Black">
-            <div class="merch-badge">Coming Soon</div>
-          </div>
-          <div class="merch-product-info">
-            <div class="merch-product-name">C&amp;C Performance Polo</div>
-            <div class="merch-product-detail">Black &middot; Gold Embroidered Logo</div>
-            <div class="merch-product-price">$84.99</div>
-          </div>
+      <div class="reveal reveal-delay-3 merch-hero">
+        <div class="merch-hero-image" onclick="openLightbox(document.getElementById('heroImg').src,'C&amp;C Performance Polo',document.getElementById('heroVariant').textContent)">
+          <img id="heroImg" src="images/polo-black.png" alt="C&amp;C Performance Polo — Black">
+          <div class="merch-badge">Coming Soon</div>
         </div>
 
-        <div class="reveal reveal-delay-3 merch-product" onclick="openLightbox('images/polo-navy.png','C&amp;C Performance Polo','Navy &amp; White · Gold Embroidered Logo')">
-          <div class="merch-image-wrapper">
-            <img src="images/polo-navy.png" alt="C&amp;C Performance Polo — Navy &amp; White">
-            <div class="merch-badge">Coming Soon</div>
-          </div>
-          <div class="merch-product-info">
-            <div class="merch-product-name">C&amp;C Performance Polo</div>
-            <div class="merch-product-detail">Navy &amp; White &middot; Gold Embroidered Logo</div>
-            <div class="merch-product-price">$84.99</div>
-          </div>
+        <div class="merch-swatches">
+          <button class="merch-swatch active" data-img="images/polo-black.png" data-variant="Black" aria-label="Black" style="background:#1a1a1a;"></button>
+          <button class="merch-swatch" data-img="images/polo-navy.png" data-variant="Navy &amp; White" aria-label="Navy &amp; White" style="background:linear-gradient(135deg,#1b2a4a 50%,#fff 50%);"></button>
+          <button class="merch-swatch" data-img="images/polo-white.png" data-variant="White &amp; Gold" aria-label="White &amp; Gold" style="background:linear-gradient(135deg,#fff 50%,#c9a84c 50%);"></button>
         </div>
 
-        <div class="reveal reveal-delay-4 merch-product" onclick="openLightbox('images/polo-white.png','C&amp;C Performance Polo','White &amp; Gold · Gold Embroidered Logo')">
-          <div class="merch-image-wrapper">
-            <img src="images/polo-white.png" alt="C&amp;C Performance Polo — White &amp; Gold">
-            <div class="merch-badge">Coming Soon</div>
-          </div>
-          <div class="merch-product-info">
-            <div class="merch-product-name">C&amp;C Performance Polo</div>
-            <div class="merch-product-detail">White &amp; Gold &middot; Gold Embroidered Logo</div>
-            <div class="merch-product-price">$84.99</div>
-          </div>
+        <div class="merch-hero-info">
+          <div class="merch-product-name">C&amp;C Performance Polo</div>
+          <div id="heroVariant" class="merch-product-detail">Black</div>
+          <div class="merch-product-price">$84.99</div>
+          <div class="merch-hero-details">Premium Sport-Tek &middot; Moisture-Wicking &middot; Gold Embroidered Logo</div>
+          <a href="mailto:hello@crownandcaddie.com?subject=C%26C%20Apparel%20Inquiry" class="merch-notify-btn">Inquire About Purchasing</a>
         </div>
       </div>
 
-      <div class="reveal reveal-delay-4" style="text-align: center; margin-top: 40px;">
-        <a href="mailto:hello@crownandcaddie.com?subject=C%26C%20Apparel%20Inquiry" class="merch-notify-btn">Inquire About Purchasing</a>
-      </div>
-
-      <p class="reveal reveal-delay-4 merch-more">Premium Sport-Tek fabric &middot; Embroidered C&amp;C crown logo &middot; Made for the course.</p>
+      <p class="reveal reveal-delay-4 merch-more">More styles dropping soon.</p>
     </div>
 
     <div class="divider"></div>
@@ -823,6 +804,24 @@
       document.body.style.overflow = '';
     }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    // Color swatch switching
+    document.querySelectorAll('.merch-swatch').forEach(function(swatch) {
+      swatch.addEventListener('click', function() {
+        if (swatch.classList.contains('active')) return;
+        document.querySelectorAll('.merch-swatch').forEach(s => s.classList.remove('active'));
+        swatch.classList.add('active');
+        var img = document.getElementById('heroImg');
+        var variant = document.getElementById('heroVariant');
+        img.classList.add('fading');
+        setTimeout(function() {
+          img.src = swatch.getAttribute('data-img');
+          img.alt = 'C&C Performance Polo — ' + swatch.getAttribute('data-variant');
+          variant.textContent = swatch.getAttribute('data-variant');
+          img.onload = function() { img.classList.remove('fading'); img.onload = null; };
+        }, 350);
+      });
+    });
   </script>
 </body>
 </html>
