@@ -162,12 +162,45 @@
       margin-top: 8px;
       letter-spacing: -0.3px;
     }
+    /* Lightbox */
+    .lightbox-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
+      cursor: zoom-out; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-overlay img {
+      max-width: 90vw; max-height: 85vh; object-fit: contain;
+      border-radius: 12px; animation: lbFadeIn 0.3s ease;
+    }
+    .lightbox-close {
+      position: absolute; top: 24px; right: 24px;
+      width: 40px; height: 40px; border-radius: 20px;
+      background: rgba(255,255,255,0.15); border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; color: #fff; transition: background 0.2s;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+    .lightbox-info {
+      position: absolute; bottom: 32px; text-align: center; color: #fff;
+    }
+    .lightbox-info h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; margin: 0 0 4px; }
+    .lightbox-info p { font-family: 'Inter', sans-serif; font-size: 14px; color: rgba(255,255,255,0.6); margin: 0 0 12px; }
+    .lightbox-info .lb-price { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; }
+    .lightbox-info .lb-inquire {
+      display: inline-block; margin-top: 16px; padding: 10px 28px; border-radius: 100px;
+      background: #fff; color: #000; font-size: 12px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .lightbox-info .lb-inquire:hover { opacity: 0.8; }
+    @keyframes lbFadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
     .merch-image-wrapper {
       position: relative;
       overflow: hidden;
       border-radius: 16px;
       background: #f5f5f5;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 3 / 4;
       cursor: pointer;
     }
     .merch-image-wrapper img {
@@ -641,7 +674,7 @@
       <p class="reveal reveal-delay-2 merch-subheading">Crafted for the course and beyond.</p>
 
       <div class="merch-grid">
-        <div class="reveal reveal-delay-3 merch-product">
+        <div class="reveal reveal-delay-3 merch-product" onclick="openLightbox('images/polo-black.png','C&amp;C Performance Polo','Black · Gold Embroidered Logo')">
           <div class="merch-image-wrapper">
             <img src="images/polo-black.png" alt="C&amp;C Performance Polo — Black">
             <div class="merch-badge">Coming Soon</div>
@@ -653,7 +686,7 @@
           </div>
         </div>
 
-        <div class="reveal reveal-delay-3 merch-product">
+        <div class="reveal reveal-delay-3 merch-product" onclick="openLightbox('images/polo-navy.png','C&amp;C Performance Polo','Navy &amp; White · Gold Embroidered Logo')">
           <div class="merch-image-wrapper">
             <img src="images/polo-navy.png" alt="C&amp;C Performance Polo — Navy &amp; White">
             <div class="merch-badge">Coming Soon</div>
@@ -665,7 +698,7 @@
           </div>
         </div>
 
-        <div class="reveal reveal-delay-4 merch-product">
+        <div class="reveal reveal-delay-4 merch-product" onclick="openLightbox('images/polo-white.png','C&amp;C Performance Polo','White &amp; Gold · Gold Embroidered Logo')">
           <div class="merch-image-wrapper">
             <img src="images/polo-white.png" alt="C&amp;C Performance Polo — White &amp; Gold">
             <div class="merch-badge">Coming Soon</div>
@@ -763,6 +796,33 @@
       });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lightbox-info">
+      <h3 id="lb-title"></h3>
+      <p id="lb-detail"></p>
+      <span class="lb-price">$84.99</span>
+      <br>
+      <a class="lb-inquire" href="mailto:hello@crownandcaddie.com?subject=C%26C%20Apparel%20Inquiry" onclick="event.stopPropagation()">Inquire</a>
+    </div>
+  </div>
+  <script>
+    function openLightbox(src, title, detail) {
+      document.getElementById('lb-img').src = src;
+      document.getElementById('lb-title').textContent = title;
+      document.getElementById('lb-detail').textContent = detail;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
 </body>
 </html>
